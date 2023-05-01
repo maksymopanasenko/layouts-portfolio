@@ -1,0 +1,54 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+.body {
+    background-color: #e9bfbf;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.portfolio {
+    padding: 40px 0;
+}
+
+.portfolio__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(96, 31, 31);
+    margin-bottom: 50px;
+}
+
+.portfolio__holder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+}
+
+.portfolio__link img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer__social {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;  
+    margin-bottom: 20px;
+}
+
+.footer__link img {
+    width: 40px;
+    height: 40px;
+}

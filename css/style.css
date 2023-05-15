@@ -1,33 +1,56 @@
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
 
 .body {
-    background-color: #e9bfbf;
-    font-family: 'Rubik', sans-serif;
+    background-color: #E5E4CC;
+    font-family: 'Heebo', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1020px;
     margin: 0 auto;
 }
 
-.portfolio {
-    padding: 40px 0;
-}
-
-.portfolio__title {
-    font-size: 36px;
+.header__title {
+    font-size: 38px;
     font-weight: 700;
     text-align: center;
-    color: rgb(96, 31, 31);
-    margin-bottom: 50px;
+    color: #304539;
+    text-shadow: 1px 2px 5px rgba(19, 28, 18, 0.868);
+    padding: 35px 0;
+    position: relative;
+}
+
+.header__title::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    height: 2px;
+    width: 250px;
+    background: #304539;;
 }
 
 .portfolio__holder {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
     gap: 20px;
+}
+
+.portfolio__item {
+    position: relative;
+    box-shadow: 7px 8px 10px #071204;
+    transition: .3s all;
+}
+
+.portfolio__item:hover {
+    transform: scale(1.03);
 }
 
 .portfolio__link img {
@@ -36,8 +59,30 @@
     object-fit: cover;
 }
 
+.portfolio__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #3c6c51d6;
+    padding: 0;
+    color: #e8e8df;
+    height: 0;
+    overflow: hidden;
+    font-size: 18px;
+    transition: all .3s;
+}
+
+.portfolio__link:hover .portfolio__info{
+    height: 40px;
+    padding: 10px;
+}
+
 .footer {
     text-align: center;
+    padding: 20px 0;
+    color: #304539;
+    font-weight: 300;
 }
 
 .footer__social {
